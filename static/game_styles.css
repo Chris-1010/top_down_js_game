@@ -1,0 +1,66 @@
+canvas {
+    overflow: hidden;
+    margin: 0;
+    display: block;
+    margin: 0 auto;
+    background-color: #a3b315;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+
+#menu {
+    position: absolute;
+    top: 15%;
+    left: 43%;
+    width: 14%;
+    display:block;
+    margin: 5em auto;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: #27502e;
+
+} 
+
+#menu ul {
+    color: whitesmoke;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+#menu a,#menu li {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.5em;
+    padding: 0.5em;
+    text-align: center;
+}
+
+#menu li:hover{
+    background-color: #a3b315;
+    border-radius: 1em;;
+}
+
+/* for js */
+#menu {
+    display: none;
+}
+
+#menu_title {
+    color: whitesmoke;
+    font-size: 3em;
+    text-align: center;
+}
+
+#score {
+    color: whitesmoke;
+    font-size: 2em;
+    text-align: center;
+}
