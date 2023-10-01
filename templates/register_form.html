@@ -1,0 +1,45 @@
+{% extends 'base_compact.html' %}
+
+{% block main_content %}
+<main class="user">
+
+    <section class="user_form">
+        <form action="" method="post" novalidate>
+            {{ form.hidden_tag() }}
+            {{ form.user_id.label }}
+            {{ form.user_id() }}
+            {% for error in form.user_id.errors %}
+            {{ error }}
+            {% endfor %}
+            <br>
+            {{ form.password.label }}
+            {{ form.password() }}
+            {% for error in form.password.errors %}
+            {{ error }}
+            {% endfor %}
+            <br />
+            {{ form.password2.label }}
+            {{ form.password2() }}
+            {% for error in form.password2.errors %}
+            {{ error }}
+            {% endfor %}
+            <br />
+            {{ form.character.label }}
+            {{ form.character( id='character') }}
+            {% for error in form.character.errors %}
+            {{ error }}
+            {% endfor %}
+            <br />
+            {{ form.submit() }}
+        </form>
+    </section>
+    <section>
+        <h1>Lancelot</h1>
+        <p>Well rounded character, ideal for a little challenge.</p>
+        <h1>Percival</h1>
+        <p>Slowest, but strongest character, great for first timers.</p>
+        <h1>Gawain</h1>
+        <p>Fastest, but most fragile character, if you enjoy fast-paced gameplay with high risks, this is the character for you.</p>
+    </section>
+</main>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'base_compact.html' %}
+
+
+{% block main_content %}
+<main>
+    <h1>Instructions</h1>
+    <h2>Controls</h2>
+    <ul>
+        <li><b>Move</b> either with <b>w, a, s, d</b> or <b>arrows</b></li>
+        <li><b>Attack</b> and look around with your <b>mouse</b></li>
+        <li><b>Roll</b> with a <b>spacebar</b> or with <b>middle click</b></li>
+        <li><b>Menu</b> can be accessed by pressing the letter <b>m</b></li>
+    </ul>
+    <h2>GUI</h2>
+    <ul>
+        <li><b>Health</b> is shown in the top left corner</li>
+        <li><b>Final Boss Distance</b> is shown below your health, the smaller it is, the closer he is</li>
+        <li><b>Compass</b> pointing to the position of the next boss is shown around the character</li>
+        <li>Number of <b>Spells</b> can be found out by looking at the staff, blue means you have spells left, once it turns white, you have waster all of them</li>
+    </ul>
+    <h2>Game Mechanics</h2>
+    <ul>
+        <li><b>Score</b> is simply the time it took you to finnish the game.</li>
+        <li><b>Damage</b> is proportional to your speed, so for example if you hit an enemy from a roll, it will deal <b>way more</b> damage</li>
+        <li><b>Rolling</b> makes you invincible while rolling</li>
+        <li><b>Levels</b> can be increased by beating a boss, you have to beat all of them to get on a level of the final boss, <b>Do not</b> try to fight a boss or an enemy that the compass is not pointing to, they are way stronger</li>
+        <li><b>Final Boss</b> spawns after you beat the <b>Fungiant</b> right in the place where you spawned, he will get progressively faster with each defeated boss and follow you around the map the whole time, wou <b>win</b> after you beat him</li>
+        <li><b>Mushrooms</b> will heal you if you hit them, <b>red</b> ones are better than <b>brown</b> ones</li>
+        <li><b>Campfires</b> will recharge your spells after you hit them</li>
+        <li><b>Boulders</b> rolled by the <b>Golem</b> boss will follow you, the only way to get rid off them is to roll through them, or make them hit someone else.</li>
+    </ul>
+    <h2>Tips and Tricks</h2>
+    <ul>
+        <li>Do <b>NOT</b> stand in the same place while being hit, much better is to <b>roll</b> away</li>
+        <li>If your health gets too low, roll away and collect mushrooms</li>
+        <li>First Isolate the boss from his minions, before fighting with him</li>
+    </ul>
+</main>
+{% endblock %}

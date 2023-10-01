@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <link rel="icon" href="{{url_for('static', filename='favicon_lancelot_head.ico')}}">
+    <script src="{{ url_for('static', filename='game.js') }}" type="module"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='game_styles.css') }} "/>
+</head>
+<!-- How to disable the oncontextmenu was learned here: https://stackoverflow.com/questions/381795/how-to-disable-right-click-context-menu-in-javascript -->
+<body oncontextmenu="return false;">
+    <canvas width="2048" height="1280"></canvas>
+    <section id="menu">
+        <h1 id="menu_title"></h1>
+        <p id="score"></p>
+        <ul>
+            <li><a href="{{ url_for('game') }}" id="play_again">New Game</a></li>
+            <li><a href="{{url_for('index')}}">Main page</a></li>
+            <li><a href="{{url_for('logout')}}">Log out</a></li>
+            <li><a href="{{url_for('leader_boards')}}">Leader board</a></li>
+            <li><a href="{{url_for('profile', user_id=g.user)}}">Profile</a></li>
+        </ul>
+    </section>
+</body>
+</html>

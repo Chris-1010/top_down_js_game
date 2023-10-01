@@ -1,0 +1,15 @@
+{% extends 'base_compact.html' %}
+
+
+{% block main_content %}
+<main>
+    <section>
+        <h2>User information</h2>
+        <ul>
+            <li>Name: {{ profile_info.attributes()['user_id'] }}</li>
+            <li>Max Score: {{ profile_info.attributes()['max_score'] }}</li>
+            <li>Character: {{ profile_info.attributes()['character'] }}</li>
+        </ul>
+    </section>
+</main>
+{% endblock %}

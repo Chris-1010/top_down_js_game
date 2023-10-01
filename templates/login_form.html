@@ -1,0 +1,25 @@
+{% extends 'base_compact.html' %}
+
+{% block main_content %}
+<main class="user">
+    <section class="user_form">
+        <form action="" method="post" novalidate>
+            {{ form.hidden_tag() }}
+            {{ form.user_id.label }}
+            {{ form.user_id() }}
+            {% for error in form.user_id.errors %}
+            {{ error }}
+            {% endfor %}
+            <br />
+            {{ form.password.label }}
+            {{ form.password() }}
+            {% for error in form.password.errors %}
+            {{ error }}
+            {% endfor %}
+            <br />
+            {{ form.submit() }}
+        </form>
+    </section>
+    <p>Did not create a profile yet? Just <a href="{{url_for('register')}}">Click Here</a>.</p>
+</main>
+{% endblock %}

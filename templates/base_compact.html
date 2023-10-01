@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <link rel="icon" href="{{url_for('static', filename='favicon_lancelot_head.ico')}}">
+    <script type="module" src="{{ url_for('static', filename='background.js') }}"></script>
+
+</head>
+
+<body class="compact">
+    <canvas width="3200" height='2000' id='background'></canvas>
+    <header>
+        <nav>
+            <ul>
+                {% if g.user %}
+                <li><a href="{{ url_for('game') }}">Play!</a></li>
+                <li><a href="{{url_for('index')}}">Instructions</a></li>
+                <li><a href="{{ url_for('profile', user_id = g.user ) }}">{{ g.user }}</a></li>
+                <li><a href="{{ url_for('logout') }}">Log out</a></li>
+                {% else %}
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
+                {% endif %}
+                <li><a href="{{ url_for('leader_boards') }}">Leader Boards</a></li>
+                <li><a href="{{ url_for('credits') }}">Credits</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="page_content">
+        {% block main_content %}
+
+        {% endblock %}
+    </div>
+    <!-- <footer>
+        <p>&copy; Game</p>
+    </footer> -->
+</body>
+
+</html>

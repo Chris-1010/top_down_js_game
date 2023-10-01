@@ -1,0 +1,19 @@
+{% extends 'base_compact.html' %}
+
+
+{% block main_content %}
+<main>
+    <table id="leaderboard">
+        <tr>
+            <th>User</th>
+            <th>Max Score</th>
+        </tr>
+        {%for player in players%}
+        <tr>
+            <td>{{player.user_id}}</td>
+            <td>{{player.max_score}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+</main>
+{% endblock %}
