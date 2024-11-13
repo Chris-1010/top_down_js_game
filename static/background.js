@@ -195,7 +195,7 @@ function draw() {
 
     // animate entities
     for (let npc of npcs){
-        if (randint(1, 50) === 1) {
+        if (npc.running && randint(1, 50) === 1) {
             npc.roll = true;
         }
         follow(npc, mouse);

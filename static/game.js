@@ -1783,8 +1783,8 @@ function animate_entity(entity) {
         entity.animation_counter = 0;
     }
 
-    // turning around no matter what
-    if (!entity.rolling)
+    // turning around no matter what, unless rolling or dying
+    if (!entity.rolling && !entity.die)
         if (entity === player) {
             if (entity.x_offset === 0 && entity.canvas_x > mouse.canvas_x) {
                 entity.x_offset = 4;
@@ -1822,7 +1822,7 @@ function move_entity(entity) {
     // friction will have to act on all forces individually, so for example knock back will just be a force applied at start and progressively getting smaller
 
     // Handle Movement
-    // if statement for whe nI do not want the character to move (dying etc.)
+    // if statement for when I do not want the character to move (dying etc.)
     if (!entity.dying && entity.spawned && !entity.spawning) {
         if (entity.moveRight || (entity.rolling && entity.x_offset === 0 && !(entity.moveUp || entity.moveDown))) { // prevents rolling without moving
             // entity.x = entity.xChange + entity.x;
